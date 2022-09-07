@@ -8,6 +8,7 @@ import javax.swing.ListModel;
 import controller.repository.PersonRepository;
 import model.Person;
 import view.ListPersonPage;
+import view.NewCarPage;
 import view.RegisterPage;
 
 public class ListPersonController extends Controller<ListPersonPage> {
@@ -24,6 +25,9 @@ public class ListPersonController extends Controller<ListPersonPage> {
 			view.dispose();
 		} else if (source == view.getButtonDelete()) {
 			runActionDeletePerson();
+		} else if (source == view.getButtonNewCar()) {
+			new NewCarPage().setVisible(true);
+			view.dispose();
 		}
 	}
 

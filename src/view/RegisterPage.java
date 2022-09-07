@@ -12,13 +12,14 @@ public class RegisterPage extends Page {
 	private final JTextField textFieldCpf;
 	private final JLabel labelCpf;
 	private final JButton buttonRegister;
-	private final RegisterController controller;
 	private final JLabel labelName;
 	private final JTextField textFieldName;
 	private final JButton buttonReturn;
 
+	private final RegisterController controller;
+
 	public RegisterPage() {
-		super("Login page");
+		super("Register page");
 
 		getContentPane().setLayout(null);
 

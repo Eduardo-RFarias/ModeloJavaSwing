@@ -19,6 +19,7 @@ public class ListPersonPage extends Page {
 
 	private final ListPersonController controller;
 	private final JButton buttonDelete;
+	private final JButton buttonNewCar;
 
 	public ListPersonPage() {
 		super("List People");
@@ -44,10 +45,14 @@ public class ListPersonPage extends Page {
 		buttonDelete.addActionListener(this);
 		getContentPane().add(buttonDelete);
 
+		buttonNewCar = new JButton("Novo carro");
+		buttonNewCar.setBounds(444, 13, 85, 21);
+		buttonNewCar.addActionListener(this);
+		getContentPane().add(buttonNewCar);
+
 		this.controller = new ListPersonController(this);
 
 		listPeople.setModel(controller.generatePersonList());
-
 	}
 
 	@Override
@@ -73,5 +78,12 @@ public class ListPersonPage extends Page {
 
 	public JButton getButtonDelete() {
 		return buttonDelete;
+	}
+
+	/**
+	 * @return the buttonNewCar
+	 */
+	public JButton getButtonNewCar() {
+		return buttonNewCar;
 	}
 }
