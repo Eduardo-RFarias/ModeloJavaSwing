@@ -22,18 +22,18 @@ public class NewCarController extends Controller<NewCarPage> {
 
 	@Override
 	public void sendAction(Object source) {
-		if (source == view.getButtonCadastrar()) {
-			runActionCadastrarCarro();
+		if (source == view.getButtonRegister()) {
+			runActionRegisterCar();
 
 			new ListPersonPage().setVisible(true);
 			view.dispose();
-		} else if (source == view.getButtonVoltar()) {
+		} else if (source == view.getButtonReturn()) {
 			new ListPersonPage().setVisible(true);
 			view.dispose();
 		}
 	}
 
-	private void runActionCadastrarCarro() {
+	private void runActionRegisterCar() {
 		String plate = view.getTextFieldPlate().getText();
 		String brand = view.getTextFieldBrand().getText();
 		String model = view.getTextFieldModel().getText();

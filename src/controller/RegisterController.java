@@ -50,8 +50,4 @@ public class RegisterController extends Controller<RegisterPage> {
 
 		personRepository.save(new Person(cpfNum, name));
 	}
-
-	public RegisterPage getView() {
-		return view;
-	}
 }

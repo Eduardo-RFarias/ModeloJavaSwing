@@ -16,10 +16,10 @@ public class ListPersonPage extends Page {
 	private final JList<Long> listPeople;
 	private final JLabel labelListTitle;
 	private final JButton buttonRegister;
-
-	private final ListPersonController controller;
 	private final JButton buttonDelete;
 	private final JButton buttonNewCar;
+
+	private final ListPersonController controller;
 
 	public ListPersonPage() {
 		super("List People");
@@ -80,9 +80,6 @@ public class ListPersonPage extends Page {
 		return buttonDelete;
 	}
 
-	/**
-	 * @return the buttonNewCar
-	 */
 	public JButton getButtonNewCar() {
 		return buttonNewCar;
 	}

@@ -45,9 +45,7 @@ public class Person extends Model {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
+		if (!super.equals(obj) || (getClass() != obj.getClass()))
 			return false;
 		Person other = (Person) obj;
 		return Objects.equals(cpf, other.cpf) && Objects.equals(name, other.name);

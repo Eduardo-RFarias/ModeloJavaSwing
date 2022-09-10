@@ -18,12 +18,12 @@ public class NewCarPage extends Page {
 	private final JLabel labelModel;
 	private final JLabel labelBrand;
 	private final JLabel labelHorsepower;
-	private final JButton buttonCadastrar;
-	private final JButton buttonVoltar;
+	private final JButton buttonRegister;
+	private final JButton buttonReturn;
+	private final JLabel labelOwner;
+	private final JComboBox<Long> comboBoxPerson;
 
 	private final NewCarController controller;
-	private JLabel labelOwner;
-	private final JComboBox<Long> comboBoxPerson;
 
 	public NewCarPage() {
 		super("New Car");
@@ -48,15 +48,15 @@ public class NewCarPage extends Page {
 		labelHorsepower.setBounds(126, 174, 45, 13);
 		getContentPane().add(labelHorsepower);
 
-		buttonCadastrar = new JButton("cadastrar");
-		buttonCadastrar.setBounds(511, 274, 85, 21);
-		buttonCadastrar.addActionListener(this);
-		getContentPane().add(buttonCadastrar);
+		buttonRegister = new JButton("cadastrar");
+		buttonRegister.setBounds(511, 274, 85, 21);
+		buttonRegister.addActionListener(this);
+		getContentPane().add(buttonRegister);
 
-		buttonVoltar = new JButton("voltar");
-		buttonVoltar.setBounds(10, 274, 85, 21);
-		buttonVoltar.addActionListener(this);
-		getContentPane().add(buttonVoltar);
+		buttonReturn = new JButton("voltar");
+		buttonReturn.setBounds(10, 274, 85, 21);
+		buttonReturn.addActionListener(this);
+		getContentPane().add(buttonReturn);
 
 		textFieldPlate = new JTextField();
 		textFieldPlate.setBounds(293, 62, 137, 19);
@@ -93,93 +93,50 @@ public class NewCarPage extends Page {
 		controller.sendAction(e.getSource());
 	}
 
-	/**
-	 * @return the textFieldPlate
-	 */
 	public JTextField getTextFieldPlate() {
 		return textFieldPlate;
 	}
 
-	/**
-	 * @return the textFieldModel
-	 */
 	public JTextField getTextFieldModel() {
 		return textFieldModel;
 	}
 
-	/**
-	 * @return the textFieldBrand
-	 */
 	public JTextField getTextFieldBrand() {
 		return textFieldBrand;
 	}
 
-	/**
-	 * @return the textFieldHP
-	 */
 	public JTextField getTextFieldHP() {
 		return textFieldHP;
 	}
 
-	/**
-	 * @return the labelPlate
-	 */
 	public JLabel getLabelPlate() {
 		return labelPlate;
 	}
 
-	/**
-	 * @return the labelModel
-	 */
 	public JLabel getLabelModel() {
 		return labelModel;
 	}
 
-	/**
-	 * @return the labelBrand
-	 */
 	public JLabel getLabelBrand() {
 		return labelBrand;
 	}
 
-	/**
-	 * @return the labelHorsepower
-	 */
 	public JLabel getLabelHorsepower() {
 		return labelHorsepower;
 	}
 
-	/**
-	 * @return the buttonCadastrar
-	 */
-	public JButton getButtonCadastrar() {
-		return buttonCadastrar;
+	public JButton getButtonRegister() {
+		return buttonRegister;
 	}
 
-	/**
-	 * @return the buttonVoltar
-	 */
-	public JButton getButtonVoltar() {
-		return buttonVoltar;
+	public JButton getButtonReturn() {
+		return buttonReturn;
 	}
 
-	/**
-	 * @return the labelOwner
-	 */
 	public JLabel getLabelOwner() {
 		return labelOwner;
 	}
 
-	/**
-	 * @param labelOwner the labelOwner to set
-	 */
-	public void setLabelOwner(JLabel labelOwner) {
-		this.labelOwner = labelOwner;
-	}
-
-	/**
-	 * @return the comboBoxPerson
-	 */
 	public JComboBox<Long> getComboBoxPerson() {
 		return comboBoxPerson;
 	}

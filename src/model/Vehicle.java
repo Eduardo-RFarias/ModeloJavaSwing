@@ -42,9 +42,7 @@ public abstract class Vehicle extends Model {
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
+		if (!super.equals(obj) || (getClass() != obj.getClass()))
 			return false;
 		Vehicle other = (Vehicle) obj;
 		return Objects.equals(brand, other.brand) && Objects.equals(model, other.model)

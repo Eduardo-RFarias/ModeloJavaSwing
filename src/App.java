@@ -1,5 +1,3 @@
-package Main;
-
 import view.ListPersonPage;
 
 public class App {
